@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit" onclick="myFunction()">Confirm</button>
+{#         java script#}
+        <script>
+            function myFunction() {
+                alert('Task Updated successfully')
+            }
+
+        </script>
+
+    </form>
+{% endblock %}
